@@ -1,0 +1,20 @@
+body{
+    background-color: white;
+;
+}
+#musictube {
+    position: relative;
+    margin: 1.5px, auto
+}
+.music {
+    letter-spacing: -1.25px;
+}
+.tube {
+    letter-spacing: -1.5px;
+    color: white;
+    background-color: red;
+    text-shadow: 0 2px 0 #000;
+    border-radius: 30% / 70%;
+    box-shadow: 0px 3px 20px -5px rgba(0, 0, 0, 0.67);
+    padding: 3px 6px 3px;
+}
