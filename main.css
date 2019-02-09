@@ -1,8 +1,29 @@
 body{text-align: center;
     color: #ffffff;
-    background-color: #0a1429;
-    ;
+    background-color: #262626;
+
 }
 
 h1{color:red;
+    text-align: center;
+}
+.topnav {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.topnav a {
+    color: white;
+    float: left;
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+    border: 20px;
+    list-style-type: none;
+    margin: 10px 30px;
+    padding: 10px;
+}
+.topnav a:hover {
+    transition: 0.4s;
+    background-color: grey;
+    color: black;
 }
