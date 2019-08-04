@@ -90,7 +90,8 @@ body{
     height: 70%;
     width: 80%;
     background: url("images/interlaced.png");
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 0.85;
     color: black;
 }
@@ -101,4 +102,3 @@ body{
     display: inline-block;
 
 }
-
