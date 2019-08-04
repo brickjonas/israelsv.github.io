@@ -3,8 +3,8 @@
     padding: 0;
 }
 body{
-    color: #ffffff;
-    background-color: #262626;
+    background: url("images/main-bg.jpg");
+    background-size: 100%;
     margin-top: 130px;
 }
 
@@ -17,20 +17,6 @@ body{
     position: fixed;
     overflow: hidden;  }
 
-.topnav .logo{
-    text-align: center;
-    width: 60px;
-    font-size: 19px;
-    border: 1px solid white;
-    margin: 0 auto;
-    padding: 7px 5px;
-}
-
-.topnav .logo span:hover{
-  background-color: gray;
-
-}
-
 
 .topnav a {
     color: white;
@@ -41,7 +27,7 @@ body{
     border: 5px;
     list-style-type: none;
     margin: 10px 20px 10px 30px;
-    padding: 7px 5px;
+    padding: 8px 5px;
 }
 .topnav a:hover {
     transition: 0.4s;
@@ -52,12 +38,44 @@ body{
     border-radius: 10% / 40%;
 }
 
+#logo{
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    float: none;
+    top: 0;
+    left: 50%;
+    margin-left: -30px;
+    text-align: center;
+    width: 60px;
+    border: 1px solid white;
+    padding: 7px 5px;
+    background-color: black;
+}
+
+#logo a{
+    list-style-type: none;
+    display: inline;
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+#logo a:hover{
+    transition: 0.4s;
+    color: black;
+  background-color: gray;
+
+}
+
+
 .pic{
     z-index: 1;
 
 }
 
 .pic img{
+    border: solid black;
     margin-top: -70px;
     height: 200px;
     width: 200px;
@@ -73,6 +91,7 @@ body{
     width: 80%;
     background: url("images/interlaced.png");
     background-size: 100%;
+    opacity: 0.85;
     color: black;
 }
 
