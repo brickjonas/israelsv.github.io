@@ -23,7 +23,7 @@
 
 .center h1{
     font-family: 'Indie Flower', cursive;
-    margin-top: 200px;
+    margin-top: 270px;
     font-size: 50px;
     margin-bottom: 30px;
 }
@@ -36,7 +36,6 @@
     border-top: 2px solid;
     margin-top: 800px;
     width: 100%;
-    height: 1000px;
     text-align: center;
 }
 .section2 h1{
@@ -47,28 +46,35 @@
 }
 
 .intro{
-    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 95vw;
     height: 350px;
     margin: 0 auto;
 }
 
 .intro p{
+    align-self: center;
     font-family: 'Animac SC', cursive;
-    margin-top: 70px;
-    margin-left: 15px;
+    margin: 50px auto;
     font-size: 20px;
-    width: 50%;
-    text-align: center;;
-    float:left;
+    width: 50vw;
 }
-.intro iframe{
-    float: right;
-    margin-top: 10px;
+
+.intro img{
+    display: block;
+    max-width: 300px;
+    max-height: 350px;
+    margin-right: 50px;
 }
 .my-offers{
-    height: 600px;
-    width: 80%;
+    width: 95vw;
+    height: 350px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .my-offers p {
     margin-top: 20px;
@@ -77,30 +83,25 @@
     font-family: 'Animac SC', cursive;
     text-align: center;
     margin-top: 30px;
-    margin-left: 15px;
-    height: 350px;
-    width: 45%;
-    float: left;
+    width: 40vw;
     font-size: 18px;
+    flex-shrink: 1;
 }
 .offer2{
     font-family: 'Animac SC', cursive;
     text-align: center;
     margin-top: 30px;
-    margin-right: 15px;
-    height: 350px;
-    width: 45%;
-    float: right;
+    width: 40vw;
     font-size: 18px;
+    flex-shrink: 1;
 }
 
 
 .check-work{
     margin: 0 auto;
     width: 95px;
-    margin-top: 400px;
     border: 1px solid;
-    padding: 18px;
+    padding: 20px;
     border-radius: 35% 70%;
 }
 .check-work a {
@@ -110,7 +111,69 @@
 }
 
 footer{
-    border-top: 1px solid;
     padding: 10px;
     background-color: #829e89;
+}
+
+
+
+@media (max-width: 900px){
+    .intro{
+        height: auto;
+        flex-direction: column;
+    }
+    .intro p {
+        width: 80vw;
+    }
+    .intro img{
+        margin: 0 auto;
+    }
+    .my-offers{
+        height: auto;
+        width: 100vw;
+    }
+    .offer1{
+        width: 45vw;
+    }
+    .offer2{
+        width: 45vw;
+    }
+}
+
+@media (max-width : 750px) {
+    .my-offers{
+        flex-direction: column;
+        align-items: center;
+    }
+    .offer1{
+        width: 85vw;
+    }
+    .offer2{
+        width: 85vw;
+    }
+
+    @media (max-width: 600px){
+        .center h1{
+            font-size: 40px;
+            margin-top: 300px;
+        }
+        .intro{
+            font-size: 15px;
+        }
+        
+    }
+  
+@media (max-width: 430px){
+    .offers1{
+        font-size: 10px;
+    }
+    .offers2{
+        font-size: 10px;
+    }
+    .center h1{
+        font-size: 35px;
+    }
+    .center h2{
+        font-size: 20px;
+    }
 }
