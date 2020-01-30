@@ -12,16 +12,15 @@ body{
     text-shadow: 1px 0.6px 0 #000;
     top: 0;
     z-index: 1;
-    width: 100%;
-    display: inline-flex;
+    width: 100vw;
     position: fixed;
+    display: flex;
     overflow: hidden;  
     margin-top: 15px;
-    margin-left: 20px;
 }
 
 
-.topnav a {
+.navbar a {
     color: white;
     float: left;
     font-size: 20px;
@@ -29,7 +28,7 @@ body{
     text-align: center;
     border: 5px;
     list-style-type: none;
-    margin: 10px 20px 10px 30px;
+    margin: 10px 20px 10px 50px;
     padding: 8px 5px;
 }
 .topnav a:hover {
@@ -45,19 +44,16 @@ body{
     margin-top: 15px;
     z-index: 1;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     top: 2px;
     left: 50%;
     margin-left: -45px;
 }
 
-
-
 #logo img {
     width: 40px;
     height:55px;
 }
-
 #logo span{
     text-shadow: 1 0.6px 0 #000;
     cursor: default;
@@ -70,11 +66,54 @@ body{
     text-align: center;
 }
 
+.social-media-icons{
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 45px;;
+}
+
+.social-media-icons a{
+    margin: 0px 5px;
+    font-size: 38px;
+    text-decoration: none;
+    color: black;
+}
+
+.social-media-icons-footer{
+    margin-top: 20px;
+    font-size: 37px;
+    margin: 0 auto;
+}
+.social-media-icons-footer a{
+    color: black;
+}
+
+.burger-icon{
+    z-index: 9;
+    display: none;
+    position: fixed;
+    top: 0px;
+    margin-top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.burger-icon div {
+    margin: 5px auto;
+    width: 35px;
+    height: 8px;
+    background-color: white;
+    border: 1px black;;
+}
+
 footer{
     text-align:center;
     font-size: 15px;
 }
-footer span{
+.heart{
     color: red;
 }
 
@@ -86,3 +125,58 @@ footer span{
     width: 100%;
     height: 100%;
 }
+
+@media (max-width : 1024px){
+    .navbar a {
+        margin: 10px 5px 10px 40px;
+    }
+
+}
+
+@media (max-width : 900px){
+    .topnav
+    {
+        display: none;
+    }
+    .topnav a
+    {
+        display: none;
+    }
+    .burger-icon{
+    display: block;
+    left: 35px;
+    }
+}
+
+@media (max-width : 600px) {
+    .topnav
+    {
+        display: none;
+    }
+    .topnav a
+    {
+        display: none;
+    }
+    .burger-icon{
+        left: 20px;
+    }
+    .social-media-icons{
+        display: none;
+    }
+   
+@media (max-width : 600px) {
+
+    .topnav
+    {
+        display: none;
+    }
+    .topnav a
+    {
+        display: none;
+    }
+}
+@media (max-width : 425px){
+    #logo img {
+        height: 40px;
+    }
+}}
