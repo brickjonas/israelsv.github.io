@@ -1,0 +1,14 @@
+#headDiv {
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+}
+
+#footerDiv {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
