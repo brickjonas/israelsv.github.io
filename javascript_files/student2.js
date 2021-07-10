@@ -92,11 +92,14 @@ function makeMain(product){
 };
 
 // continue on with lab 9 #4
-function buttonFunction(){
-    document.querySelector('#makemaindiv').innerHTML = mainvar;
-}
+function makeLinkBar(){
+    var linkBar = "<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post'>";
+    linkBar += "<input type='image' name='submit' src='https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif' alt='Add to Cart'> <img alt='' width='1' height='1' src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif'></form>"
+    return(linkBar);
+};
 
 document.querySelector("#headDiv").innerHTML = getHeader();
 document.querySelector('#footerDiv').innerHTML= getFooter(companyname, address, phonenumber);
 document.querySelector('#fakemenu').innerHTML = makeMenu(3);
 document.querySelector('#makemaindiv').innerHTML = makeMain(product1);
+document.querySelector('#prod_bar').innerHTML = makeLinkBar();
