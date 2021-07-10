@@ -81,7 +81,7 @@ function makeMenu(size){
 function makeMain(product){
     var mainvar = "<table style ='width:100%' border = 1 cellpadding = 10><tr>";
     mainvar += "<td rowspan=3 style='width:30%;text-align:center;vertical-align:middle'>";
-    mainvar += "<span id='prod_img'>Product Image</span></td>";
+    mainvar += "<img src= 'https://college1.com/images/" + product.id + ".gif'></td>";
     mainvar += "<td id='prod_name'>Product Name: <br>" + product.name + "</td>";
     mainvar += "<td style='text-align:right' id='prod_id'>Product ID: <br>" + product.id + "</td></tr>";
     mainvar += "<tr><td style='text-align:center' colspan=2>";
