@@ -12,3 +12,7 @@
     width: 100%;
     
 }
+#fakemenu{
+    display: flex;
+    justify-content: space-evenly;
+}
