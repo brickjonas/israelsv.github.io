@@ -2,7 +2,7 @@ var companyname = "BlockBuster But Better";
 var address = "212 NE Revere Ave, Bend, OR 97702";
 var phonenumber = "(541) 385-9112";
 var month = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August',  'September', 'October', 'November', 'December'];
-var weekday = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+var weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 var product1 = { name:"HP 4426", id:"4426", desc:"Newest and Best Laptop from HP Computer"};
 var product2 = { name:"Apple 88123 iPad", id:"88123", desc:"Apple Tablet Computer"};
@@ -12,7 +12,7 @@ var product3 = { name:"Dell Dimension 2400", id:"2400X", desc:"A fast 2.4 ghz co
 function getHeader(){
     var nowDate = new Date();
     var headvar = "<header>";
-    headvar += weekday[nowDate.getDay() - 1];
+    headvar += weekday[nowDate.getDay()];
     headvar += ", ";
     headvar +=month[nowDate.getMonth()];
     headvar += " ";
@@ -63,6 +63,7 @@ function makeMenu(size){
     buttonvar += "<button type = 'button' onclick='document.querySelector(\"#makemaindiv\").innerHTML = makeMain(product1)'>Product #1 </button>";
     buttonvar += "<button type = 'button' onclick='document.querySelector(\"#makemaindiv\").innerHTML = makeMain(product2)'>Product #2 </button>";
     buttonvar += "<button type = 'button' onclick='document.querySelector(\"#makemaindiv\").innerHTML = makeMain(product3)'>Product #3 </button>";
+    buttonvar += "<button type = 'button' onclick ='document.querySelector(\"#my_main\").innerHTML= dealCards()'>Deal Cards</button>";
     return(buttonvar);
     for(let i = 0; i< size; i++){
         menuSize += "Menu <br>"
@@ -91,11 +92,20 @@ function makeMain(product){
     return(mainvar);
 };
 
-// continue on with lab 9 #4
+// continue on with lab 10 part 2
 function makeLinkBar(){
     var linkBar = "<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post'>";
     linkBar += "<input type='image' name='submit' src='https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif' alt='Add to Cart'> <img alt='' width='1' height='1' src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif'></form>"
     return(linkBar);
+};
+
+function dealCards(){
+    var cards = "<td><img id='cardX' src='https://college1.com/classes/cs190/lecture/images/cards/gbCard" + Math.floor(Math.random()*52) + ".gif'></td>";
+    cards += "<td><img id='cardX' src='https://college1.com/classes/cs190/lecture/images/cards/gbCard" + Math.floor(Math.random()*52) + ".gif'></td>";
+    cards += "<td><img id='cardX' src='https://college1.com/classes/cs190/lecture/images/cards/gbCard52.gif'></td>";
+    cards += "<td><img id='cardX' src='https://college1.com/classes/cs190/lecture/images/cards/gbCard52.gif'></td>";
+    cards += "<td><img id='cardX' src='https://college1.com/classes/cs190/lecture/images/cards/gbCard52.gif'></td>";
+    return(cards);
 };
 
 document.querySelector("#headDiv").innerHTML = getHeader();
