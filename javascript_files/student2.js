@@ -89,6 +89,7 @@ function makeMain(product){
     mainvar += "<span id='prod_bar'>Shopping Cart Link Bar</span> </td></tr>";
     mainvar += "<tr><td colspan=2 id='prod_desc'>Product Description : <br>" + product.desc + "</td></tr>";
     mainvar += "</table>";
+    document.querySelector("#my_main").innerHTML= "Make Main";  
     return(mainvar);
 };
 
